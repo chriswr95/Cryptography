@@ -1,0 +1,11 @@
+The plaintexts have no spaces, only a - z encoded as
+0,0,0,0,0, to 1,1,0,0,1,  
+The keystream is the repetition of an English keyword or phrase,
+encoded the same way (only a - z).
+The ciphertext consists of the keystream XORed with the plaintext.
+Each ciphertext comes from a different keystream.
+
+The file pairs.txt shows which pairs of letters XOR to a give 5-bit string.
+
+Be warned that the Kasiski text won't get you very far - you need to spend 
+some time thinking up new ideas. 
