@@ -18,7 +18,7 @@ def xor(block1, block2):
 
     return result_block
 
-def decrypt(cipher_text, key):
+def decrypt_column(cipher_text, key):
     ans = []
     for i in range(len(cipher_text)):
         ans.append(xor(cipher_text[i], key))

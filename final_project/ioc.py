@@ -17,11 +17,11 @@ input = file.read()
 cipher_text = []
 for i in range(0, len(input), 5):
     cipher_text.append(input[i:i+5])
-    
 
 
 
-for key_length in range(1,26):
+
+for key_length in range(1,51):
     total = 0
     coincidences = 0
 

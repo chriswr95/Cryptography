@@ -1,10 +1,6 @@
 import sys
 from analysis import *
 
-# function definitions
-
-
-
 # Main:
 
 file_name = sys.argv[1]
@@ -40,11 +36,9 @@ blocks = []
 for i in range(26):
     blocks.append("{0:05b}".format(i))
 
-#Test Case
-# print "COLUMN BEFORE DECRYPTION:"
-# print columns[column_index]
+
 for i in range(len(blocks)):
-    column = decrypt(columns[column_index], blocks[i])
+    column = decrypt_column(columns[column_index], blocks[i])
     if valid_input(column):
         character_frequencies = frequency_analysis(column)
         tot_eta = 0
