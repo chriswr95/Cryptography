@@ -1,3 +1,6 @@
+import string
+import math
+
 def binary_to_char(binary):
     return chr(int(binary, 2) + 97)
 
@@ -34,8 +37,11 @@ def frequency_analysis(plain_text):
         else:
             char_occurances[plain_text[i]] = 0
 
-    for block in char_occurances:
-        char_freqs[binary_to_char(block)] = char_occurances[block]
+    for letter in string.ascii_lowercase:
+        if char_to_binary(letter) in char_occurances.keys():
+            char_freqs[letter] = char_occurances[char_to_binary(letter)]
+        else:
+            char_freqs[letter] = 0
 
     return char_freqs
 
@@ -47,5 +53,8 @@ def valid_input(text):
 
 #note only works on distributions of lowercase ascii letters
 def bhattacharyya(dist1, dist2):
+    bhattacharyya_coefficient = 0
     for letter in string.ascii_lowercase:
-        print letter
+        bhattacharyya_coefficient += math.sqrt(dist1[letter] * dist2[letter])
+
+    return bhattacharyya_coefficient
