@@ -1,8 +1,5 @@
-# Function definitions
-def char_to_binary(character):
-    return "{0:05b}".format(ord(character) - 97)
+from analysis import *
+# Main
 
-#main
-print char_to_binary("a")
-print char_to_binary("b")
-print char_to_binary("z")
+for letter in string.ascii_lowercase:
+    print letter

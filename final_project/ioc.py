@@ -18,10 +18,10 @@ cipher_text = []
 for i in range(0, len(input), 5):
     cipher_text.append(input[i:i+5])
 
+print cipher_text
 
 
-
-for key_length in range(1,51):
+for key_length in range(1,26):
     total = 0
     coincidences = 0
 

@@ -44,3 +44,8 @@ def valid_input(text):
         if int(text[i], 2) > 25:
             return False
     return True
+
+#note only works on distributions of lowercase ascii letters
+def bhattacharyya(dist1, dist2):
+    for letter in string.ascii_lowercase:
+        print letter
